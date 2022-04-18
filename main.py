@@ -32,6 +32,11 @@ x_text = []
 url_list=[]
 L1=[]
 
+@app.route('/', methods=['GET'])
+def hello_world():
+  return "Hello World"
+
+
 @app.route('/customerinfo', methods=['GET', "POST"])
 def customerinfo():
     req = request.get_json()
